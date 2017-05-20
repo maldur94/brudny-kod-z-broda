@@ -33,8 +33,13 @@ echo '<!DOCTYPE html>
     </head>
     <body class="bbb">
         <div class="all">
-            <header class="naglowek">
-                <h1 class="og">Wyszukane ogłoszenia</h1>
+            <header class="naglowek">';
+			if ($_GET['success']!= null)
+			{
+			if ($_GET['success']== true)echo '<div>Pomyślnie wysłano zgłoszenie :)</div>';
+			else if ($_GET['success']== false) echo '<div>Wystąpił błąd podczas wysyłania zgłoszenia :(</div>';
+			}
+                echo '<h1 class="og">Wyszukane ogłoszenia</h1>
             </header>
     <div class="lista">
      <div class="row">

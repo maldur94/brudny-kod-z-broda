@@ -27,41 +27,41 @@ echo '<html>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </head>
     <body>
-        <div class="all">
-            <header class="naglowek">
+        <div>
+            <header class="og">
                 <h1>'.strtoupper($row['stanowisko']).'</h1>
+                <hr>
             </header>
-            <div class="opis">
-                <table>';
+            <div class="row opis mar ">
+               ';
                     if ($pracodawca != null && $pracodawca != "") 
 					{
-					echo '<tr>
-                     <td>Pracodawca: '.$pracodawca['0'].'</td>
-                    </tr>';
+					echo 
+                        '<div class="col-md-2 col-md-offset-4 ">Pracodawca: </div> <div class=" col-md-2" >'.$pracodawca['0'].'</div> ';
+                        
 					}
-                    echo '<tr>
-                        <td>Data dodania: '.$row['data_dodania'].'</td>
-                    </tr>
+                    echo '
                     
-                    <tr>
-                        <td>Działy: '.$row['dzial'].'</td>
-                    </tr>
-                    <tr>
-                        <td>Miasto: '.$row['miasto'].'</td>
-                    </tr>
-                    <tr>
-                        <td>Województwo: '.$row['wojewodztwo'].'</td>
-                    </tr>
-                    <tr>
-                        <td>Obowiązki: '.$row['obowiazki'].'</td>
-                    </tr>
-                    <tr>
-                        <td>Wykształcenia: '.$row['wyksztalcenia'].'</td>
-                    </tr>
-                </table>
+                    
+                    
+                    
+                    <div class="col-md-2 col-md-offset-4">Data dodania:</div> <div class=" col-md-4" >'.$row['data_dodania'].'</div>
+                    <div class="col-md-2 col-md-offset-4 " >Działy:</div> <div class=" col-md-4" > '.$row['dzial'].'</div>
+                    <div class="col-md-2 col-md-offset-4 ">Miasto: </div> <div class=" col-md-4" >'.$row['miasto'].'</div>
+                    
+                    <div class="col-md-2 col-md-offset-4 ">Województwo: </div> <div class=" col-md-4" >'.$row['wojewodztwo'].'</div>
+                    <div class="col-md-2 col-md-offset-4 ">Obowiązki: </div> <div class=" col-md-4" >'.$row['obowiazki'].'</div>
+                    <div class="col-md-2 col-md-offset-4 ">Wykształcenia: </div> <div class=" col-md-4" >'.$row['wyksztalcenia'].'</div>
+               
+              
+                
             </div>
-        </div>       
+            <br>
+           <hr>
+             <div class="sr"><a href="aplikuj.php?id='.$id.'"><button type="button" class="btn btn-success btn-lg">Aplikuj</button></a></div>
+             <br>
+        </div>     
     </body>
    
-</html>';
+</html>';  
 ?>
