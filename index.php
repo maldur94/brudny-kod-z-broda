@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+//header('Content-Type: text/html; charset=utf-8');
+echo '<!DOCTYPE html>
 <html>
 
     <head>
@@ -18,7 +20,8 @@
  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <link rel="stylesheet" type="text/css"
   href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-
+<script type="text/javascript"
+  src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
         
 
         
@@ -29,11 +32,11 @@
                 <h1>Aplikacja</h1>
             </header>
             <div class="row">
-                <div class="pad col-md-4 col-md-offset-4">
-                    <form  action="/PHP/send.php" class="form-horizontal">
+                <div class="col-md-4 col-md-offset-4">
+                    <form method="POST" action="send.php" enctype="multipart/form-data" class="form-horizontal">
                         <div class="form-group">        
-                            <label for="inputImie" class="control-label">ImiÄ™</label>
-                            <input type="imie" class="form-control" id="inputImie" name="inputImie" placeholder="ImiÄ™" aria-required="true" aria-describedby="imie_info" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Podaj imiÄ™." required>
+                            <label for="inputImie" class="control-label">Imiê</label>
+                            <input type="imie" class="form-control" id="inputImie" name="inputImie" placeholder="Imiê" aria-required="true" aria-describedby="imie_info" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Podaj imiê." required>
                             <p hidden="" id="imie_info">Podaj Imie</p>
                        
                               
@@ -42,28 +45,28 @@
                             <p hidden="" id="nazwisko_info">Podaj nazwisko</p>
                                
                             <label for="inputEmail" class="control-label">Email</label>
-                            <input type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Email" aria-required="true" aria-describedby="email_info" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="PrawidÅ‚owy adres email przykÅ‚ad przykÅ‚adowy@onet.pl." required>
-                            <p hidden="" id="email_info">PrawidÅ‚owy adres email przykÅ‚ad przykÅ‚adowy@onet.pl</p>
+                            <input type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Email" aria-required="true" aria-describedby="email_info" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Prawid³owy adres email przyk³ad przyk³adowy@onet.pl." required>
+                            <p hidden="" id="email_info">Prawid³owy adres email przyk³ad przyk³adowy@onet.pl</p>
                            
                             <label for="inputTelefon" class="control-label">Telefon</label>
-                            <input type="telefon" class="form-control" id="inputTelefon" name="inputTelefon" placeholder="Telefon" aria-required="true" aria-describedby="telefon_info" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Numer telefonu nie moÅ¼e zawieraÄ‡ spacji i myÅ›lnikÃ³w." >
-                            <p hidden="" id="telefon_info">Numer telefonu nie moÅ¼e zawieraÄ‡ spacji i myÅ›lnikÃ³w</p>
+                            <input type="telefon" class="form-control" id="inputTelefon" name="inputTelefon" placeholder="Telefon" aria-required="true" aria-describedby="telefon_info" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Numer telefonu nie mo¿e zawieraæ spacji i myœlników." >
+                            <p hidden="" id="telefon_info">Numer telefonu nie mo¿e zawieraæ spacji i myœlników</p>
                         </div>
                         <div class="form-group">
-                        <label for="InputFile">Plik CV</label>
-                        <input type="file" id="InputFile" name="inputFile" aria-required="true" aria-describedby="cv_info" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Wybierz plik CV." required>
+                        <label for="inputFile">Plik CV</label>
+                        <input type="file" id="inputFile" name="inputFile" aria-required="true" aria-describedby="cv_info" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="Wybierz plik CV." required>
                             <p hidden="" id="cv_info">Wybierz plik z CV</p>
                         </div>
                         <div class="checkbox">
                         <label>
-                            <input type="checkbox" aria-required="true" aria-describedby="zgoda_info"> WyraÅ¼am zgodÄ™ na przetwarzanie moich danych osobowych dla potrzeb niezbÄ™dnych do realizacji procesu rekrutacji (zgodnie z UstawÄ… z dnia 29.08.1997 roku o Ochronie Danych Osobowych; tekst jednolity: Dz. U. 2016 r. poz. 922)
+                            <input type="checkbox" aria-required="true" aria-describedby="zgoda_info"> Wyra¿am zgodê na przetwarzanie moich danych osobowych dla potrzeb niezbêdnych do realizacji procesu rekrutacji (zgodnie z Ustaw¹ z dnia 29.08.1997 roku o Ochronie Danych Osobowych; tekst jednolity: Dz. U. 2016 r. poz. 922)
                             
                         </label>
-                            <p hidden="" id="zgoda_info">WyraÅ¼am zgodÄ™ na przetwarzanie moich danych osobowych dla potrzeb niezbÄ™dnych do realizacji procesu rekrutacji (zgodnie z UstawÄ… z dnia 29.08.1997 roku o Ochronie Danych Osobowych; tekst jednolity: Dz. U. 2016 r. poz. 922)</p>
+                            <p hidden="" id="zgoda_info">Wyra¿am zgodê na przetwarzanie moich danych osobowych dla potrzeb niezbêdnych do realizacji procesu rekrutacji (zgodnie z Ustaw¹ z dnia 29.08.1997 roku o Ochronie Danych Osobowych; tekst jednolity: Dz. U. 2016 r. poz. 922)</p>
                         </div>
                         
                         <div class="bt">
-                            <input type="submit" class="btn btn-primary" value="WyÅ›lij">
+                            <input type="submit" name ="submit" class="btn btn-primary" value="Wyœlij">
                         </div>
                         
               
@@ -73,7 +76,7 @@
                 </div>
                 
   
-</div>
+
 
 
 
@@ -105,4 +108,6 @@ $(window).load(function(){
 });
 </script>
 
-</html>
+</html>';
+
+?>
